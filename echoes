@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echoes of a Root</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Share Tech Mono', monospace;
+      background: linear-gradient(135deg, #ffecd2, #fcb69f);
+      color: #202020;
+      text-align: center;
+      padding: 2rem;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 850px;
+      margin: auto;
+      background: #fff8f0;
+      padding: 2rem;
+      border-radius: 14px;
+      box-shadow: 0 0 20px rgba(255, 128, 0, 0.2);
+    }
+    .node {
+      margin: 1.5rem 0;
+      border-left: 4px solid #ff9800;
+      padding-left: 1rem;
+      position: relative;
+      cursor: pointer;
+      transition: color 0.3s ease, transform 0.3s ease, background 0.3s ease;
+      background: #fff3e0;
+      border-radius: 6px;
+    }
+    .node:hover {
+      color: #e65100;
+      transform: scale(1.02);
+      background: #ffe0b2;
+    }
+    .node::before {
+      content: "\2193";
+      position: absolute;
+      left: -1.2rem;
+      top: -0.2rem;
+    }
+    .highlight {
+      color: #ff5722;
+    }
+    .sub {
+      font-size: 0.9rem;
+      color: #555;
+    }
+    .details {
+      display: none;
+      text-align: left;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      color: #333;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    .node.open .details {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-5px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    hr {
+      margin: 3rem auto;
+      border: 1px solid #ccc;
+      width: 60%;
+    }
+    a.button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.5rem 1.2rem;
+      background-color: #ff9800;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 4px;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    a.button:hover {
+      background-color: #ff5722;
+      transform: translateY(-2px);
+    }
+    .citation {
+      margin-top: 4rem;
+      font-size: 0.85rem;
+      color: #777;
+    }
+    .citation a {
+      color: #ff5722;
+      text-decoration: none;
+    }
+    .citation a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Echoes of a Root</h1>
+
+    <p class="sub">Proto-Indo-European Root: <span class="highlight">*gʰrēy-</span> — "to smear, to paint"</p>
+
+    <div class="node" onclick="this.classList.toggle('open')">
+      <strong>Greek:</strong> <span class="highlight">Khristós</span> (anointed one)
+      <div class="details">
+        → Latin: <span class="highlight">Christus</span><br>
+        → English: <span class="highlight">Christ</span>
+      </div>
+    </div>
+
+    <div class="node" onclick="this.classList.toggle('open')">
+      <strong>Proto-Germanic:</strong> <span class="highlight">*grīmô</span> (mask)
+      <div class="details">
+        → Old English: <span class="highlight">grīma</span><br>
+        → English: <span class="highlight">grime</span>
+      </div>
+    </div>
+
+    <div class="node" onclick="this.classList.toggle('open')">
+      <strong>Sanskrit:</strong> <span class="highlight">ghṛta</span> (sprinkled)
+      <div class="details">
+        → Hindi: <span class="highlight">ghī</span> (clarified butter)<br>
+        → English: <span class="highlight">ghee</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <p class="sub">Proto-Indo-European Root: <span class="highlight">*kʷékʷlom</span> — "wheel, circle"</p>
+
+    <div class="node" onclick="this.classList.toggle('open')">
+      <strong>Greek:</strong> <span class="highlight">kúklos</span> (circle)
+      <div class="details">
+        → Latin: <span class="highlight">cyclus</span><br>
+        → English: <span class="highlight">cycle</span>
+      </div>
+    </div>
+
+    <div class="node" onclick="this.classList.toggle('open')">
+      <strong>Proto-Germanic:</strong> <span class="highlight">*hwehwlą</span> (wheel)
+      <div class="details">
+        → Old English: <span class="highlight">hwēol</span><br>
+        → English: <span class="highlight">wheel</span>
+      </div>
+    </div>
+
+    <div class="node" onclick="this.classList.toggle('open')">
+      <strong>Sanskrit:</strong> <span class="highlight">cakrá</span> (wheel)
+      <div class="details">
+        → English (via Sanskrit/Buddhist influence): <span class="highlight">chakra</span>
+      </div>
+    </div>
+
+    <hr>
+
+    <p class="sub">Proto-Indo-European Root: <span class="highlight">*bʰréh₂tēr</span> — "brother"</p>
+
+    <div class="node" onclick="this.classList.toggle('open')">
+      <strong>Latin:</strong> <span class="highlight">frāter</span> (brother)
+      <div class="details">
+        → Old French: <span class="highlight">frere</span><br>
+        → English: <span class="highlight">friar</span> (brother of a religious order)
+      </div>
+    </div>
+
+    <div class="node" onclick="this.classList.toggle('open')">
+      <strong>Proto-Germanic:</strong> <span class="highlight">*brōþēr</span> (brother)
+      <div class="details">
+        → Old English: <span class="highlight">brōþor</span><br>
+        → English: <span class="highlight">brother</span>
+      </div>
+    </div>
+
+    <div class="node" onclick="this.classList.toggle('open')">
+      <strong>Sanskrit:</strong> <span class="highlight">bhrātr̥</span> (भ्रातृ — brother)
+      <div class="details">
+        → Romani: <span class="highlight">phral</span> (brother/friend)<br>
+        → English: <span class="highlight">pal</span> (friend)
+      </div>
+    </div>
+
+    <a href="https://starkeycomics.com/home/" class="button" target="_blank">Learn More</a>
+
+    <div class="citation">
+      Inspired by graphics by <a href="https://starkeycomics.com/home/" target="_blank">Starkey Comics</a>.
+    </div>
+
+    <p style="margin-top: 3rem; font-size: 0.9rem; color: #888;">Click a node to expand its history...</p>
+  </div>
+</body>
+</html>
